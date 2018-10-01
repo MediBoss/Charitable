@@ -1,0 +1,34 @@
+<fieldset>
+  <legend>Edit Charity</legend>
+  <!-- TITLE -->
+  <div class="form-group">
+    <p>
+      <label for="charity-name">Charity name</label><br>
+      <input id="charity-name" type="text" name="title" value="{{charity.title}}"/>
+    </p>
+  </div>
+
+
+
+  <!-- DESCRIPTION -->
+  <div class="form-group">
+    <p>
+      <label for="review-description">Charity Description</label><br>
+      <textarea id="charity-description" class="form-control" name="description" rows="10" cols="30">{{charity.description}}</textarea>
+    </p>
+  </div>
+
+      <!-- AMOUNT -->
+
+    <div class="form-group">
+        <p>
+            <label for="donation-amount">Donation Amount</label><br>
+            <input id="donation-amount" type="number" name="amount" value="{{charity.amountDonated}}">
+        </p>
+    </div>
+
+    <div class="form-group">
+        <label for="charity-date">Charity Date</label></div>
+        <input id="charity-date" type="date" name="date" value="{{charity.date}}">
+    </div>
+</fieldset>

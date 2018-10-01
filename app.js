@@ -6,6 +6,9 @@ const exphbs = require('express-handlebars');
 const http = require('http');
 const app = express();
 
+// DATABASE CONNECTION
+mongoose.connect('mongodb://localhost/charitable', {useNewUrlParser: true});
+
 const home = require('./controllers/home');
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));

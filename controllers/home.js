@@ -4,14 +4,18 @@
 const express = require('express');
 const router = express.Router();
 
-let charities = [
-    { name: 'unicef'},
-    { amount: 120}
-  ]
+// PATH TO MODELS
+const Charity = require('../models/charity');
+
 
 router.get('/', function(request,response){
-    response.render('home-index', { charities: charities});
-  })
+    Charity.find().then(charities => {
+        response.render('home-index', { charities: charities});  
+    })
+    .catch(error => {
+        console.lof(error.message);
+    })
+  });
 
   
 module.exports = router;
