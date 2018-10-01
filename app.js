@@ -7,9 +7,6 @@ const http = require('http');
 const app = express();
 
 
-app.get('/', function(request, response){
-  console.log('home page');
-});
 
 app.listen(3000, function() {
   console.log('Server Listening on Port 3000');
