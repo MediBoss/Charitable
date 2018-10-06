@@ -11,7 +11,7 @@ router.get('/charities/new', function(request, response){
 });
 
 // ROUTE : CREATE
-
+/*
 router.post('/charities', function(request,response){
     Charity.create(request.body).then( charity => {
         console.log(request.body);
@@ -20,6 +20,7 @@ router.post('/charities', function(request,response){
         console.log(error.message);
     })
 })
+*/
 // ROUTE : SHOW
 
 // ROUTE : EDIT
