@@ -21,14 +21,21 @@ router.post('/charities', function(request,response){
 
 // ROUTE : SHOW
 router.get('/charities/:id', function(request,response){
-    Charity.findById(request.params.id).then((charity) => {
+    Charity.findById(request.params.id).then( (charity) => {
         response.render('charities-show', { charity: charity});
-    }).catch((error) => {
+    }).catch( (error) => {
         console.log(error.message);
     });
 });
 
-// ROUTE : EDIT
+// ROUTE : EDIT CHARITY
+router.get('/charities/:id/edit', function(request, response){
+    Charity.findByIdAndUpdate(request.params.id).then( (charity)=> {
+        response.render('charities-edit', { charity: charity});
+    }).catch( (error) => {
+        console.log(error.message);
+    })
+})
 
 // ROUTE : UPDATE
 
