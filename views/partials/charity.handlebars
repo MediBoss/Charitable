@@ -1,0 +1,10 @@
+<div>
+    <h3><a href="/charities/{{this._id}}">{{this.name}}</a></h1>
+    <h4>${{this.amountDonated}}</h5>
+    <p><a href="/charities/{{this._id}}/edit">Edit</a></p>
+    <p>
+        <form method="POST" action="/charities/{{this._id}}?_method=DELETE">
+            <button class="btn btn-primary" type="submit">Delete</button>
+        </form>
+    </p>
+</div>

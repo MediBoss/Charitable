@@ -12,7 +12,7 @@ router.get('/charities/new', function(request, response){
 // ROUTE : CREATE CHARITY
 router.post('/charities', function(request,response){
     Charity.create(request.body).then( (charity) => {
-        console.log(charity)
+        console.log(charity);
         response.redirect('/');
     }).catch((error) => {
         console.log(error.message);
