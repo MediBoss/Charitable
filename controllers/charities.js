@@ -1,11 +1,10 @@
-//THE CONTROLLER FOR ALL CHARITIES
-
 const express = require('express');
 const router = express.Router();
  
+// PATH TO MODELS
 const Charity = require('../models/charity');
 
-// ROUTE : NEW 
+// ROUTE : NEW CHARITY
 router.get('/charities/new', function(request, response){
     response.render('charities-new', {});
 });
