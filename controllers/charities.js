@@ -10,9 +10,8 @@ router.get('/charities/new', function(request, response){
 });
 
 // ROUTE : CREATE CHARITY
-
 router.post('/charities', function(request,response){
-    Charity.create(request.body).then( charity => {
+    Charity.create(request.body).then( (charity) => {
         console.log(charity)
         response.redirect('/');
     }).catch((error) => {
@@ -21,6 +20,13 @@ router.post('/charities', function(request,response){
 })
 
 // ROUTE : SHOW
+router.get('/charities/:id', function(request,response){
+    Charity.findById(request.params.id).then((charity) => {
+        response.render('charities-show', { charity: charity});
+    }).catch((error) => {
+        console.log(error.message);
+    });
+});
 
 // ROUTE : EDIT
 
