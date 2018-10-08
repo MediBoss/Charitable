@@ -48,4 +48,12 @@ router.post('charities/:id', function(request,response){
 
 // ROUTE : DELETE
 
+router.delete('/charities/:id', function(request, response){
+    Charity.findByIdAndRemove(request.params.id).then(charity => {
+        response.redirect('/');
+    }).catch( (error) => {
+        console.log(error.message);
+    })
+});
+
 module.exports = router;
