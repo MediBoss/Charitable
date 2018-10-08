@@ -23,7 +23,7 @@ const charities = require('./controllers/charities');
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.use(home);
-app.use(charities)
+app.use(charities);
 
 // SERVER STARTING
 app.listen(3000, function() {

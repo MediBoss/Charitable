@@ -10,7 +10,7 @@ const Charity = require('../models/charity');
 
 router.get('/', function(request,response){
     Charity.find().then(charities => {
-        response.render('home-index', { charities: charities});  
+        response.render('charities-index', { charities: charities});  
     })
     .catch(error => {
         console.lof(error.message);

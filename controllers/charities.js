@@ -7,7 +7,7 @@ const Charity = require('../models/charity');
 
 // ROUTE : NEW 
 router.get('/charities/new', function(request, response){
-    response.render('charities-form', {}); // redirect to charity form
+    response.render('charities-new', {});
 });
 
 // ROUTE : CREATE
@@ -28,3 +28,5 @@ router.post('/charities', function(request,response){
 // ROUTE : UPDATE
 
 // ROUTE : DELETE
+
+module.exports = router;
