@@ -9,17 +9,17 @@ router.get('/charities/new', function(request, response){
     response.render('charities-new', {});
 });
 
-// ROUTE : CREATE
-/*
+// ROUTE : CREATE CHARITY
+
 router.post('/charities', function(request,response){
     Charity.create(request.body).then( charity => {
-        console.log(request.body);
+        console.log(charity)
         response.redirect('/');
     }).catch((error) => {
         console.log(error.message);
     })
 })
-*/
+
 // ROUTE : SHOW
 
 // ROUTE : EDIT
