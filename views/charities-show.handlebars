@@ -6,7 +6,7 @@
         <h3 style="color: green">Amount Donated : ${{charity.amountDonated}}</h3>
         <p>{{charity.description}}</p>
 
-        <p><a href="/charities/:id/edit">Edit</a></p>
+        <p><a href="/charities/{{charity._id}}/edit">Edit</a></p>
         <p>
             <form method="POST" action="/charities/{{charity._id}}?_method=DELETE">
                 <button class="btn btn-primary" type="submit">Delete</button>
