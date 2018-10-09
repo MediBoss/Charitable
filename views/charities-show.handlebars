@@ -1,0 +1,16 @@
+<a href="/charities/{{charity._id}}">Back to Charities</a>
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <h1>{{charity.name}}</h1>
+        <h3>Date : {{charity.date}}</h3>
+        <h3 style="color: green">Amount Donated : ${{charity.amountDonated}}</h3>
+        <p>{{charity.description}}</p>
+
+        <p><a href="/charities/:id/edit">Edit</a></p>
+        <p>
+            <form method="POST" action="/charities/{{charity._id}}?_method=DELETE">
+                <button class="btn btn-primary" type="submit">Delete</button>
+            </form>
+        </p>
+    </div>
+</div>

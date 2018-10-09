@@ -38,8 +38,8 @@ router.get('/charities/:id/edit', function(request, response){
 });
 
 // ROUTE : UPDATE CHARITY
-router.post('charities/:id', function(request,response){
-    Charity.findByIdAndUpdate(request.body.id, request.body).then(charity => {
+router.put('charities/:id', function(request,response){
+    Charity.findByIdAndUpdate(request.params.id, request.body).then(charity => {
         response.redirect(`/charities/${charity._id}`);
     }).catch( (error) => {
         console.log(error.message)
