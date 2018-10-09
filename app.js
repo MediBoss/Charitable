@@ -13,7 +13,6 @@ const app = express();
 
 
 // IMPORTING THE CONTROLLERS
-const home = require('./controllers/home');
 const charities = require('./controllers/charities');
 
 // DATABASE CONNECTION
@@ -26,7 +25,6 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(home);
 app.use(charities);
 
 // SERVER BOOTING UP

@@ -4,6 +4,19 @@ const router = express.Router();
 // PATH TO MODELS
 const Charity = require('../models/charity');
 
+
+
+// ROUTE : INDEX
+router.get('/', function(request,response){
+    Charity.find().then(charities => {
+        response.render('charities-index', { charities: charities});  
+    })
+    .catch(error => {
+        console.lof(error.message);
+    })
+  });
+
+
 // ROUTE : NEW CHARITY
 router.get('/charities/new', function(request, response){
     response.render('charities-new', {});
