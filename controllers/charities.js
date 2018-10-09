@@ -1,15 +1,16 @@
+// THIS FILE CONTROLS THE CHARITIES ROUTES
+
 const express = require('express');
 const router = express.Router();
- 
+
 // PATH TO MODELS
 const Charity = require('../models/charity');
-
 
 
 // ROUTE : INDEX
 router.get('/', function(request,response){
     Charity.find().then(charities => {
-        response.render('charities-index', { charities: charities});  
+        response.render('charities-index', { charities: charities});
     })
     .catch(error => {
         console.lof(error.message);

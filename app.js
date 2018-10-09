@@ -18,8 +18,6 @@ const charities = require('./controllers/charities');
 // DATABASE CONNECTION
 mongoose.connect('mongodb://localhost/charitable', {useNewUrlParser: true});
 
-
-
 // SETTING UP VIEWS
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');

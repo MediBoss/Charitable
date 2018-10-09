@@ -1,6 +1,6 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
-const server = require('..app');
+const server = require('../app');
 const should = chai.should();
 const Charity = require('../models/charity');
 
@@ -47,7 +47,7 @@ describe('Charities', () => {
     // TESTING ROUTE : CREATE
     it('should return the created charity object /charities POST', (done) => {
         chai.request(server)
-            .poset('/charities')
+            .post('/charities')
             .end( (error, response) => {
                 response.should.have.status(200);
                 response.should.be.html;
@@ -55,7 +55,7 @@ describe('Charities', () => {
             });
     });
 
-    // TESTING ROUTE : SHOW 
+    // TESTING ROUTE : SHOW
     it('should display created /charities/:id GET', (done) => {
         let review = new Charity(dummyCharity);
         review.save( (error, data) => {
@@ -83,7 +83,7 @@ describe('Charities', () => {
         });
     });
 
-    // TEST ROUTE : UPDATE 
+    // TEST ROUTE : UPDATE
     it('should update the edited charity /charities/:id PUT', (done) => {
         let charity = new Charity(dummyCharity);
         charity.save( (error, data) => {
@@ -113,4 +113,3 @@ describe('Charities', () => {
     });
 
 });
-
