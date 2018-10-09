@@ -47,14 +47,13 @@ router.put('/charities/:id', function(request,response){
 });
 
 // ROUTE : DELETE CHARITY
-
 router.delete('/charities/:id', function(request, response){
     Charity.findByIdAndRemove(request.params.id).then(charity => {
-        consolel.log(charity);
+        console.log(charity);
         response.redirect('/');
     }).catch( (error) => {
         console.log(error.message);
-    })
+    });
 });
 
 module.exports = router;
