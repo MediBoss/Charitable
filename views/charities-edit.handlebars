@@ -1,8 +1,8 @@
 <!-- Template to edit a charity -->
 <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
-        <form method="POST" action="charities/{{charity._id}}?_method=PUT">
-            {{> charities-form}}
+        <form method="POST" action="/charities/{{charity._id}}?_method=PUT">
+            {{> charities-form }}
             <div class="form-group">
                 <button class="btn btn-primary" type="submit">Save</button>
             </div>

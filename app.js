@@ -24,7 +24,7 @@ mongoose.connect('mongodb://localhost/charitable', {useNewUrlParser: true});
 // SETTING UP VIEWS
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
-app.use(methodOverride('_ method'));
+app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(home);
 app.use(charities);

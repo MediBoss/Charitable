@@ -38,7 +38,7 @@ router.get('/charities/:id/edit', function(request, response){
 });
 
 // ROUTE : UPDATE CHARITY
-router.put('charities/:id', function(request,response){
+router.put('/charities/:id', function(request,response){
     Charity.findByIdAndUpdate(request.params.id, request.body).then(charity => {
         response.redirect(`/charities/${charity._id}`);
     }).catch( (error) => {
@@ -46,10 +46,11 @@ router.put('charities/:id', function(request,response){
     });
 });
 
-// ROUTE : DELETE
+// ROUTE : DELETE CHARITY
 
 router.delete('/charities/:id', function(request, response){
     Charity.findByIdAndRemove(request.params.id).then(charity => {
+        consolel.log(charity);
         response.redirect('/');
     }).catch( (error) => {
         console.log(error.message);
