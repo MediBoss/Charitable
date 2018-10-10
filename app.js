@@ -15,6 +15,7 @@ const app = express();
 // IMPORTING THE CONTROLLERS
 const charities = require('./controllers/charities');
 const dashboard = require('./controllers/dashboard');
+const home = require('./controllers/home');
 
 // DATABASE CONNECTION
 mongoose.connect('mongodb://localhost/charitable', {useNewUrlParser: true});
@@ -26,6 +27,7 @@ app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(charities);
 app.use(dashboard);
+app.use(home);
 
 // SERVER BOOTING UP
 app.listen(3000, function() {

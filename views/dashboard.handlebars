@@ -1,6 +1,12 @@
 <div class="container">
-  <h2>Welcome to Your Dashboard</h2>
+  <h1>Welcome to Your Dashboard</h1>
+
 </div>
+
+  <br/>
+  <br/>
+
+      <h4>Total Amount : {{this.amountDonated}}</h4>
 
 <br/>
 <br/>
@@ -9,9 +15,9 @@
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">Charity Name</th>
-            <th scope="col">Date Of Donation</th>
-            <th scope="col">Amount Donated</th>
+            <th scope="col"><h3>Charity Name</h3></th>
+            <th scope="col"><h3>Date Of Donation</h3></th>
+            <th scope="col"><h3>Amount Donated</h3></th>
         </tr>
     </thead>
     <tbody>
@@ -20,7 +26,7 @@
             {{!-- <th scope="row">{{this._id}}</th>  --}}
             <td>{{this.name}}</td>
             <td>{{this.date}}</td>
-            <td>${{this.amountDonated}}</td>
+            <td style="color: green">${{this.amountDonated}}</td>
         </tr>
       {{/each}}
     </tbody>
