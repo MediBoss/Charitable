@@ -1,0 +1,28 @@
+body{
+  background-color: gray;
+  font-family: 'Agency FB';
+}
+
+/*  Controls sthe appearence titles */
+
+/* Controls the appearence of links throughout the website   */
+:link{
+  color: black;
+  text-decoration: none;
+}
+
+:visited{
+
+}
+
+/*  Controls the appearence of all the paragraphs in the website  */
+p{
+
+}
+
+/* Controls all the h3 tags in the website     */
+h1{
+  font-family: sans-serif;
+  font-style: normal;
+
+}

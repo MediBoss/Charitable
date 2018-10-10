@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 // PATH TO MODEL
-const Charity = require("../model/charity");
+const Charity = require("../models/charity");
 
 
 // ROUTE : CHARITIES DASHBOARD
