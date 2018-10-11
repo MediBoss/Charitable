@@ -16,13 +16,14 @@ const app = express();
 const charities = require('./controllers/charities');
 const dashboard = require('./controllers/dashboard');
 const home = require('./controllers/home');
-
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/charitable';
 // DATABASE CONNECTION
-mongoose.connect('mongodb://localhost/charitable', {useNewUrlParser: true});
+mongoose.connect(mongoURI, {useNewUrlParser: true});
 
 // SETTING UP VIEWS
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
+app.use(express.static("public"));
 app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(charities);
