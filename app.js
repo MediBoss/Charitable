@@ -14,8 +14,10 @@ const app = express();
 
 // IMPORTING THE CONTROLLERS
 const charities = require('./controllers/charities');
+const donations = require('./controllers/donations');
 const dashboard = require('./controllers/dashboard');
 const home = require('./controllers/home');
+
 
 
 
@@ -25,13 +27,14 @@ mongoose.connect(mongoURI, {useNewUrlParser: true});
 
 
 
-// SETTING UP VIEWS
+// SETTING UP VIEWS AND MIDDLEWARE
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.use(express.static("public"));
 app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(charities);
+app.use(donations);
 app.use(dashboard);
 app.use(home);
 

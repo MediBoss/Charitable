@@ -1,9 +1,7 @@
-// THIS FILE CONTROLS THE CHARITIES ROUTES
+// IMPORTING NEEDED MODULES
 
 const express = require('express');
 const router = express.Router();
-
-// PATH TO MODELS
 const Charity = require('../models/charity');
 
 

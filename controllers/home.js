@@ -7,7 +7,6 @@ const keyword = "charities"
 const newsapi = new NewsAPI(apiKey);
 
 
-
 // ROUTE : HOME PAGE
 router.get('/', function(req,res){
 
@@ -16,12 +15,10 @@ router.get('/', function(req,res){
     language: 'en',
     sortBy: 'relevancy'
   }).then(response => {
-    
+
     res.render('home', { news: response.articles});
 
   }).catch(console.error)
 });
-
-
 
 module.exports = router;
