@@ -1,13 +1,11 @@
 body{
-  background-color: gray;
-  font-family: 'Agency FB';
+  background-color: black;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: white;
 }
 
-/*  Controls sthe appearence titles */
-
-/* Controls the appearence of links throughout the website   */
 :link{
-  color: black;
+  color: none;
   text-decoration: none;
 }
 
@@ -15,14 +13,26 @@ body{
 
 }
 
-/*  Controls the appearence of all the paragraphs in the website  */
+
+
 p{
 
 }
 
-/* Controls all the h3 tags in the website     */
+
 h1{
-  font-family: sans-serif;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-style: normal;
+}
+
+h2{
+
+}
+
+h3{
+
+}
+
+h4{
 
 }

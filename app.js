@@ -16,9 +16,14 @@ const app = express();
 const charities = require('./controllers/charities');
 const dashboard = require('./controllers/dashboard');
 const home = require('./controllers/home');
-const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/charitable';
+
+
+
 // DATABASE CONNECTION
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/charitable';
 mongoose.connect(mongoURI, {useNewUrlParser: true});
+
+
 
 // SETTING UP VIEWS
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
@@ -29,6 +34,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(charities);
 app.use(dashboard);
 app.use(home);
+
+
 
 // SERVER BOOTING UP
 app.listen(3000, function() {

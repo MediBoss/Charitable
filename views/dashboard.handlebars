@@ -3,11 +3,6 @@
 
 </div>
 
-  <br/>
-  <br/>
-
-      <h4>Total Amount : {{this.amountDonated}}</h4>
-
 <br/>
 <br/>
 
@@ -24,9 +19,9 @@
         {{#each charities}}
         <tr>
             {{!-- <th scope="row">{{this._id}}</th>  --}}
-            <td>{{this.name}}</td>
-            <td>{{this.date}}</td>
-            <td style="color: green">${{this.amountDonated}}</td>
+            <td><a href="/charities/{{this._id}}"><h4>{{this.name}}</h4></a></td>
+            <td><h4>{{this.date}}<h4></td>
+            <td style="color: green"><h4>${{this.amountDonated}}<h4></td>
         </tr>
       {{/each}}
     </tbody>
