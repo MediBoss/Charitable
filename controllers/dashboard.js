@@ -3,14 +3,15 @@ const router = express.Router();
 
 // PATH TO MODEL
 const Charity = require("../models/charity");
+const Donations = require("../models/donation");
 
 
 // ROUTE : CHARITIES DASHBOARD
 router.get("/dashboard", (request, response) => {
-  Charity.find()
-    .then(charities => {
-      response.render('dashboard', { charities: charities});
-    }).catch(error => {
+  Donations.find()
+    .then( donations => {
+      response.render('dashboard', { donations: donations});
+    }).catch( error => {
       console.log(error.message);
     });
 });

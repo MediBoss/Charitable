@@ -2,7 +2,16 @@
   <a href="/charities/new" class="btn btn-primary">Add Charity</a>
 </div>
 </br>
-<h1>Trending Humanitarian News</h1>
+
+
+<div class="text-center">
+  <h1>Trending Humanitarian News</h1>
+</div>
+
+
+</br>
+</br>
+
 
   {{#each news}}
     <div class="movie-poster">
@@ -13,8 +22,13 @@
         <span class="title"><h3>{{this.title}}</h3>
         <span class="author"><h4>Written by : {{this.author}}</h4>
         <span class="description"><h4>{{this.description}}</h4>
+        <div class="pull-right">
+          <a href="/donations/new" class="btn btn-primary">Donate</a>
+        </div>
       </div>
     </div>
+  </br>
+  </br>
   </br>
   </br>
   </br>

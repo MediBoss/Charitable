@@ -1,0 +1,16 @@
+<a href="/dashboard">Backto to dashboard</a>
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <h1>{{donation.donorName}}</h1>
+        <h3>{{donation.date}}</h3>
+        <h3 style="color: green">Amount Donated : ${{donation.amount}}</h3>
+        <p>{{donation.messageToCharity}}</p>
+
+        <p><a href="/donations/{{donation._id}}/edit">Edit</a></p>
+        <p>
+            <form method="POST" action="/donations/{{donation._id}}?_method=DELETE">
+                <button class="btn btn-primary" type="submit">Delete</button>
+            </form>
+        </p>
+    </div>
+</div>

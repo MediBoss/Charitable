@@ -1,28 +1,45 @@
-<div class="container">
+<div class="pull-left">
   <h1>Welcome to Your Dashboard</h1>
 
 </div>
 
 <br/>
 <br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
-
+<div class="text-center">
+<h2>Your Donations<h2>
+</div>
 <table class="table">
     <thead>
         <tr>
-            <th scope="col"><h3>Charity Name</h3></th>
+            <th scope="col"><h3>Donor Name</h3></th>
             <th scope="col"><h3>Date Of Donation</h3></th>
             <th scope="col"><h3>Amount Donated</h3></th>
         </tr>
     </thead>
     <tbody>
-        {{#each charities}}
+        {{#each donations}}
         <tr>
             {{!-- <th scope="row">{{this._id}}</th>  --}}
-            <td><a href="/charities/{{this._id}}"><h4>{{this.name}}</h4></a></td>
+            <td><a href="/donations/{{this._id}}"><h4>{{this.donorName}}</h4></a></td>
             <td><h4>{{this.date}}<h4></td>
-            <td style="color: green"><h4>${{this.amountDonated}}<h4></td>
+            <td style="color: green"><h4>${{this.amount}}<h4></td>
         </tr>
       {{/each}}
     </tbody>
 </table>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="text-center">
+<h2>Your Charities<h2>
+</div>

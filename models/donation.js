@@ -7,5 +7,4 @@ module.exports = mongoose.model('Donation',{
   amount: Number,
   date: String,
   messageToCharity: String,
-  charityId: String
 });

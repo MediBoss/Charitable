@@ -1,6 +1,6 @@
   <fieldset>
   <legend>New Charity</legend>
-  <!-- TITLE -->
+  <!-- CHARITY TITLE -->
   <div class="form-group">
     <p>
       <label for="charity-name">Charity name</label><br>
@@ -9,25 +9,22 @@
   </div>
 
 
-  <!-- DESCRIPTION -->
+        <!-- CHARITY CAUSE -->
+
+      <div class="form-group">
+          <p>
+              <label for="charity-cause">Charity Cause</label><br>
+              <input id="charity-cause" type="text" name="cause" value="{{charity.cause}}">
+          </p>
+      </div>
+
+
+  <!-- CAHRITY DESCRIPTION -->
   <div class="form-group">
     <p>
       <label for="review-description">Charity Description</label><br>
-      <textarea id="charity-description" class="form-control" placeholder="Tell us about the charity you donated..." name="description" rows="10" cols="30">{{charity.description}}</textarea>
+      <textarea id="charity-description" class="form-control" placeholder="Give some details about your charity..." name="description" rows="10" cols="30">{{charity.description}}</textarea>
     </p>
   </div>
 
-      <!-- DONATION AMOUNT -->
-
-    <div class="form-group">
-        <p>
-            <label for="donation-amount">Donation Amount</label><br>
-            <input id="donation-amount" type="number" name="amountDonated" value="{{charity.amountDonated}}">
-        </p>
-    </div>
-
-    <div class="form-group">
-        <label for="charity-date">Charity Date</label></div>
-        <input id="charity-date" type="text" name="date" value="{{charity.date}}">
-    </div>
 </fieldset>
