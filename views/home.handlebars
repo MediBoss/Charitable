@@ -1,7 +1,17 @@
 <div class="text-right">
   <a href="/reviews/new" class="btn btn-primary">Add Charity</a>
 </div>
+</br>
+<h1>Trending Humanitarian News</h1>
 
-<div class="row">
-  
-</div>
+  {{#each news}}
+    <div class="movie-poster">
+      <a href="{{this.url}}" class="thumbnail">
+        <img src="{{this.urlToImage}}">
+      </a>
+      <div class="caption">
+        <span class="title"><h3>{{this.title}}</h3>
+        <span class="author"><h4>{{this.author}}</h4>
+      </div>
+    </div>
+  {{/each}}
