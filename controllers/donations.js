@@ -9,23 +9,23 @@ const Charity = require("../models/charity");
 
 // ROUTE : NEW DONATION
 router.get("/charities/:charityId/donations/new", function(request, response){
-  response.render('donations-new', {});
+  response.render('donations-new', { charityId: request.params.charityId } );
 });
 
 // ROUTE : CREATE DONATION
 router.post("/charities/:charityId/donations", function(request, response){
-  response.create(request.body)
+  Donation.create(request.body)
     .then( (donation) => {
       console.log(donation);
-      response.status(200).send( {donation: donation} );
+      response.redirect(`/charities/${donation.charityId}`);
     }).catch( (error) => {
       response.status(400).send( {error: error} )
-    })
+    });
 });
 
 // ROUTE : SHOW DONATION
 router.get("/charities/:charityId/donations/:id", function(request, response){
-
+  Charity.findById(request.params.charityId)
 });
 
 //ROUTE : EDIT DONATION
