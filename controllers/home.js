@@ -17,7 +17,7 @@ router.get('/', function(req,res){
     language: 'en',
     sortBy: 'relevancy'
   }).then(response => {
-    console.log(response.articles[0].source);
+    console.log(response.articles[0].title);
   });
 });
 
