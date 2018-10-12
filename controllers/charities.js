@@ -23,7 +23,6 @@ router.post('/charities', function(request,response){
 // ROUTE : SHOW
 router.get('/charities/:id', function(request,response){
     Charity.findById(request.params.id).then( (charity) => {
-        response.render('charities-show', { charity: charity});
     }).catch( (error) => {
         console.log(error.message);
     });
