@@ -12,7 +12,7 @@ router.get("/dashboard", (request, response) => {
     .then( (charities) => {
       Donations.find()
         .then( donations => {
-          response.render('dashboard', { donations: donations}, );
+          response.render('dashboard', { charities: charities, donations: donations});
         }).catch( error => {
           console.log(error.message);
         });

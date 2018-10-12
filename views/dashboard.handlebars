@@ -54,12 +54,12 @@
         </tr>
     </thead>
     <tbody>
-        {{#each donations}}
+        {{#each charities}}
         <tr>
             {{!-- <th scope="row">{{this._id}}</th>  --}}
-            <td><a href="/donations/{{this._id}}"><h4>{{this.donorName}}</h4></a></td>
-            <td><h4>{{this.date}}<h4></td>
-            <td style="color: green"><h4>${{this.amount}}<h4></td>
+            <td><a href="/charities/{{this._id}}"><h4>{{this.name}}</h4></a></td>
+            <td><h4>{{this.cause}}<h4></td>
+            <td><h4>{{this.description}}<h4></td>
         </tr>
       {{/each}}
     </tbody>
