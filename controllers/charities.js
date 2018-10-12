@@ -3,7 +3,7 @@
 const express = require('express');
 const router = express.Router();
 const Charity = require('../models/charity');
-
+const User = require('../models/user');
 
 // ROUTE : NEW CHARITY
 router.get('/charities/new', function(request, response){
@@ -14,7 +14,7 @@ router.get('/charities/new', function(request, response){
 router.post('/charities', function(request,response){
     Charity.create(request.body).then( (charity) => {
         console.log(charity);
-        response.redirect('/');
+        response.redirect(`/charities/${charity._id}`);
     }).catch((error) => {
         console.log(error.message);
     })
@@ -23,6 +23,9 @@ router.post('/charities', function(request,response){
 // ROUTE : SHOW
 router.get('/charities/:id', function(request,response){
     Charity.findById(request.params.id).then( (charity) => {
+      User.find({ charityId: request.params.id}).then(users => {
+        response.render('charities-show', { charity: charity, users: users});
+      })
     }).catch( (error) => {
         console.log(error.message);
     });

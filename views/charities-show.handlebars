@@ -4,8 +4,7 @@
 <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
         <h1>{{charity.name}}</h1>
-        <h3>Date : {{charity.date}}</h3>
-        <h3 style="color: green">Amount Donated : ${{charity.amountDonated}}</h3>
+        <h3>Cause : {{charity.cause}}</h3>
         <p>{{charity.description}}</p>
 
         <p><a href="/charities/{{charity._id}}/edit">Edit</a></p>
@@ -18,6 +17,11 @@
 </div>
 
  <!-- Show Users -->
- {{#each users}}
-  {{> user}}
- {{/each}}
+ <div class="pull-left">
+   <h2>Participants<h2>
+
+     {{#each users}}
+      {{> user}}
+     {{/each}}
+
+ </div>

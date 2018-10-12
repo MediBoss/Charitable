@@ -17,6 +17,7 @@ const charities = require('./controllers/charities');
 const donations = require('./controllers/donations');
 const dashboard = require('./controllers/dashboard');
 const home = require('./controllers/home');
+const users = require('./controllers/users');
 
 
 
@@ -37,6 +38,7 @@ app.use(charities);
 app.use(donations);
 app.use(dashboard);
 app.use(home);
+app.use(users);
 
 
 
