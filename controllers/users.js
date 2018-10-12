@@ -23,7 +23,9 @@ router.post('/charities/users', function(request,response){
 
 // ROUTE : SHOW
 router.get('/charities/:charityId/users/:id', function(request,response){
-    Charity.findById(request.params.id).then( (charity) => {
+    User.findById(request.params.id).then( (user) => {
+      console.log(user);
+      response.render("users-show", { user: user});
     }).catch( (error) => {
         console.log(error.message);
     });
@@ -51,13 +53,9 @@ router.get('/charities/:charityId/users/:id', function(request,response){
 router.delete('/charities/:charityId/users/:id', function(request, response){
     User.findByIdAndRemove(request.params.id)
       .then(user => {
-        response.status(200).send({
-          user: user
-        });
+        response.redirect(`/`);
     }).catch( (error) => {
-        response.send(400).send({
-          error: error
-        });
+        console.log(error.message);
     });
 });
 

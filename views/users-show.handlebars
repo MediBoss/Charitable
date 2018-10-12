@@ -1,0 +1,14 @@
+<div class="text-center">
+  <h2>User Information</h2>
+</div>
+
+<div class="pull-left">
+  <h2>First Name : {{user.firstName}}</h2>
+  <h2>Last Name : {{user.lastName}}</h2>
+  <h2>Organization : {{user.organization}}</2>
+  <h2>Email Address : {{user.emailAddress}}</h2>
+
+  <form method="POST" action="/charities/{{user.charityId}}/users/{{user._id}}?_method=DELETE">
+      <button class="btn btn-primary" type="submit">Remove user</button>
+  </form>
+</div>
