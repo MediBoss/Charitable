@@ -31,7 +31,7 @@ mongoose.connect(mongoURI, {useNewUrlParser: true});
 // SETTING UP VIEWS AND MIDDLEWARE
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
-//app.use(express.static("public"));
+app.use(express.static("public"));
 app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(charities);

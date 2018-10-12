@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-// PATH TO MODEL
+// PATH TO MODELS
 const Charity = require("../models/charity");
 const Donations = require("../models/donation");
 

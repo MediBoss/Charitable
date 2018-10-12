@@ -1,7 +1,7 @@
-//THE CONTROLLER FOR ALL USERS
-
 const express = require('express');
 const router = express.Router();
+
+// PATH TO MODEL
 const User = require('../models/user');
 
 
@@ -30,24 +30,6 @@ router.get('/charities/:charityId/users/:id', function(request,response){
         console.log(error.message);
     });
 });
-
-// // ROUTE : EDIT CHARITY
-// router.get('/charities/:id/edit', function(request, response){
-//     Charity.findById(request.params.id, function(error, charity){
-//         response.render('charities-edit', { charity: charity});
-//     }).catch( (error) => {
-//         console.log(error.message);
-//     });
-// });
-//
-// // ROUTE : UPDATE CHARITY
-// router.put('/charities/:id', function(request,response){
-//     Charity.findByIdAndUpdate(request.params.id, request.body).then(charity => {
-//         response.redirect(`/charities/${charity._id}`);
-//     }).catch( (error) => {
-//         console.log(error.message)
-//     });
-// });
 
 // ROUTE : DELETE CHARITY
 router.delete('/charities/:charityId/users/:id', function(request, response){

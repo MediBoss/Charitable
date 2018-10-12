@@ -1,7 +1,8 @@
-// IMPORTING NEEDED MODULES
-
 const express = require('express');
+const axios = require('axios');
 const router = express.Router();
+
+// PATH TO MODELS
 const Charity = require('../models/charity');
 const User = require('../models/user');
 

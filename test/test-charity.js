@@ -15,15 +15,14 @@ let dummyCharity = {
 };
 
 describe('Charities', () => {
+  after(() => {
+      Charity.deleteMany({name: "The Royal Foundation of Sussex"}).exec( (error, charities) => {
+          //charities.remove();
+      });
+  });
 
-    after(() => {
-        Charity.deleteMany({name: "The Royal Foundation of Sussex"}).exec( (error, charities) => {
-            charities.remove();
-        });
-    });
-
-    // TESTING ROUTE : INDEX
-    it('should index ALL charities on / GET', (done) => {
+    // TESTING ROUTE : INDEX CHARITIES
+    it('should index ALL charities on /charities GET', (done) => {
         chai.request(server)
             .get('/')
             .end( (error, response) => {
@@ -33,7 +32,7 @@ describe('Charities', () => {
             });
     });
 
-    // TESTING ROUTE : NEW
+    // TESTING ROUTE : NEW CHARITY
     it('should display new form on /charities/new GET', (done) => {
         chai.request(server)
             .get('/charities/new')
@@ -41,10 +40,10 @@ describe('Charities', () => {
                 response.should.have.status(200);
                 response.should.be.html;
                 done();
-            })
+            });
     });
 
-    // TESTING ROUTE : CREATE
+    // TESTING ROUTE : CREATE CHARITY
     it('should return the created charity object /charities POST', (done) => {
         chai.request(server)
             .post('/charities')
@@ -55,10 +54,10 @@ describe('Charities', () => {
             });
     });
 
-    // TESTING ROUTE : SHOW
-    it('should display created /charities/:id GET', (done) => {
-        let review = new Charity(dummyCharity);
-        review.save( (error, data) => {
+    // TESTING ROUTE : SHOW CHARITY
+    it('should display teh clicked /charities/:id GET', (done) => {
+        let charity = new Charity(dummyCharity);
+        charity.save( (error, data) => {
             chai.request(server)
                 .get(`/charities/${data._id}`)
                 .end( (error, response) => {
@@ -69,7 +68,7 @@ describe('Charities', () => {
         });
     });
 
-    // TESTING ROUTE : EDIT
+    // TESTING ROUTE : EDIT CHARITY
     it('should give the user the ability to edit a charity /charities/:id GET', (done) => {
         let charity = new Charity(dummyCharity);
         charity.save( (error, data) => {
@@ -83,7 +82,7 @@ describe('Charities', () => {
         });
     });
 
-    // TEST ROUTE : UPDATE
+    // TEST ROUTE : UPDATE CHARITY
     it('should update the edited charity /charities/:id PUT', (done) => {
         let charity = new Charity(dummyCharity);
         charity.save( (error, data) => {
@@ -98,7 +97,7 @@ describe('Charities', () => {
         });
     });
 
-    // TEST ROUTE : DELETE
+    // TEST ROUTE : DELETE CHARITY
     it('should delete the selected charity /charities/:id DELETE', (done) => {
         let charity = new Charity(dummyCharity);
         charity.save( (error, data) => {
