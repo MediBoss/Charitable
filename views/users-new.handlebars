@@ -1,0 +1,13 @@
+<!--- Templete to add a new participant to the charity -->
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <form method="POST" action="/charities/users">
+      <input type="hidden" value="{{charities._id}}" name="charityId">
+      {{> users-form}}
+
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>

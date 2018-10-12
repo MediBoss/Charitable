@@ -1,5 +1,5 @@
 <a href="/">Back to Charities</a><div class="pull-right">
-  <a href="/donations/new" class="btn btn-primary">Donate</a>
+  <a href="/charities/{{charity._id}}/users/new" class="btn btn-primary">Add People</a>
 </div>
 <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
@@ -16,3 +16,8 @@
         </p>
     </div>
 </div>
+
+ <!-- Show Users -->
+ {{#each users}}
+  {{> user}}
+ {{/each}}
