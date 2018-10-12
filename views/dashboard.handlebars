@@ -3,6 +3,7 @@
 
 </div>
 
+
 <br/>
 <br/>
 <br/>
@@ -11,14 +12,14 @@
 <br/>
 
 <div class="text-center">
-<h2>Your Donations<h2>
+<h3>Your Donations<h3>
 </div>
 <table class="table">
     <thead>
         <tr>
-            <th scope="col"><h3>Donor Name</h3></th>
-            <th scope="col"><h3>Date Of Donation</h3></th>
-            <th scope="col"><h3>Amount Donated</h3></th>
+            <th scope="col"><h4>Donor Name</h4></th>
+            <th scope="col"><h4>Date Of Donation</h4></th>
+            <th scope="col"><h4>Amount Donated</h4></th>
         </tr>
     </thead>
     <tbody>
@@ -43,3 +44,23 @@
 <div class="text-center">
 <h2>Your Charities<h2>
 </div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col"><h4>Name</h4></th>
+            <th scope="col"><h4>Cause</h4></th>
+            <th scope="col"><h4>description</h4></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each donations}}
+        <tr>
+            {{!-- <th scope="row">{{this._id}}</th>  --}}
+            <td><a href="/donations/{{this._id}}"><h4>{{this.donorName}}</h4></a></td>
+            <td><h4>{{this.date}}<h4></td>
+            <td style="color: green"><h4>${{this.amount}}<h4></td>
+        </tr>
+      {{/each}}
+    </tbody>
+</table>

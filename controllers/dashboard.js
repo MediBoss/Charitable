@@ -8,12 +8,17 @@ const Donations = require("../models/donation");
 
 // ROUTE : CHARITIES DASHBOARD
 router.get("/dashboard", (request, response) => {
-  Donations.find()
-    .then( donations => {
-      response.render('dashboard', { donations: donations});
-    }).catch( error => {
-      console.log(error.message);
-    });
+  Charity.find()
+    .then( (charities) => {
+      Donations.find()
+        .then( donations => {
+          response.render('dashboard', { donations: donations}, );
+        }).catch( error => {
+          console.log(error.message);
+        });
+    }).catch( (error) => {
+      console.log(error.message)
+    })
 });
 
 
