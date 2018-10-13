@@ -9,6 +9,7 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const exphbs = require('express-handlebars');
 const http = require('http');
+const port = process.env.PORT || 3000;
 const app = express();
 
 
@@ -43,7 +44,5 @@ app.use(users);
 
 
 // SERVER BOOTING UP
-app.listen(process.env.PORT || 3000, () => {
-  console.log("Server listening on  PORT 3000");
-});
+app.listen(port);
 module.exports = app;
