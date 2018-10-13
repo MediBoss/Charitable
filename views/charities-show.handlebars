@@ -1,19 +1,20 @@
 <a href="/">Back to Charities</a>
 <div class="pull-right">
   <a href="/charities/{{charity._id}}/users/new" class="btn btn-primary">Add People</a>
+    </br>
+  <form method="POST" action="/charities/{{charity._id}}?_method=DELETE">
+      <button class="btn btn-primary" type="submit">Delete charity</button>
+  </form>
 </div>
 <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
         <h1>{{charity.name}}</h1>
-        <h3>Cause : {{charity.cause}}</h3>
+        <h5>Cause : {{charity.cause}}</h5>
+        </br>
         <p>{{charity.description}}</p>
 
         <p><a href="/charities/{{charity._id}}/edit">Edit</a></p>
-        <p>
-            <form method="POST" action="/charities/{{charity._id}}?_method=DELETE">
-                <button class="btn btn-primary" type="submit">Delete</button>
-            </form>
-        </p>
+
     </div>
 </div>
 

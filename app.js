@@ -23,8 +23,8 @@ const users = require('./controllers/users');
 
 
 // DATABASE CONNECTION
-const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/charitable';
-mongoose.connect(mongoURI, {useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/charitable", {useNewUrlParser: true});
+
 
 
 
@@ -43,8 +43,7 @@ app.use(users);
 
 
 // SERVER BOOTING UP
-app.listen(3000, function() {
-  console.log('Server Listening on Port 3000');
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Server listening on  PORT 3000");
 });
-
 module.exports = app;

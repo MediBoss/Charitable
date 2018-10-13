@@ -45,6 +45,9 @@ h3{
 h4{
   color: white;
 }
+h5{
+  color: white;
+}
 
 
 /* Styling Charity form */
@@ -86,5 +89,29 @@ h4{
 }
 
 #donation-message{
+  color: black;
+}
+
+
+/* Styling   User Form*/
+
+#donation-label{
+  color: white;
+}
+
+#first-name{
+  color: black;
+}
+
+#last-name{
+  color: black;
+}
+
+
+#organization{
+  color: black;
+}
+
+#emailAdress{
   color: black;
 }
