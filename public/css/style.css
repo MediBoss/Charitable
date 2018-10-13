@@ -1,11 +1,11 @@
 body{
   background-color: black;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
-  color: white;
+
 }
 
 :link{
-  color: none;
+  color: blue;
   text-decoration: none;
 }
 
@@ -13,26 +13,78 @@ body{
 
 }
 
+input{
+  width: 50%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 3px #555;
+  border-radius: 10px;
+  outline: none;
+}
 
 
 p{
-
+  color: white;
 }
 
 
 h1{
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-style: normal;
+  color: white;
 }
 
 h2{
-
+  color: white;
 }
 
 h3{
-
+ color: white;
 }
 
 h4{
+  color: white;
+}
 
+
+/* Styling Charity form */
+#charity-label{
+  color: white;
+}
+#charity-name{
+  color: black;
+}
+#charity-cause{
+  color: black;
+}
+
+#charity-cause{
+  color: black;
+}
+#charity-description{
+
+}
+
+
+/* Styling Donation Form*/
+
+#donation-label{
+  color: white;
+}
+
+#donation-name{
+  color: black;
+}
+
+#donation-amount{
+  color: black;
+}
+
+
+#donation-date{
+  color: black;
+}
+
+#donation-message{
+  color: black;
 }

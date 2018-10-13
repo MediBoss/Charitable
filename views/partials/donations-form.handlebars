@@ -1,32 +1,36 @@
 <fieldset>
-<legend>New Donation</legend>
-<div class="form-group">
-  <p>
-    <label for="charity-name">Full Name</label><br>
-    <input id="donation-name" type="text" name="donorName" value="{{donation.donorName}}"/>
-  </p>
-</div>
-
-
-    <!-- DONATION AMOUNT -->
-
-  <div class="form-group">
+<h2>New donation</h2>
+</br>
+</br>
+  <div>
+    <div class="form-group">
       <p>
-          <label for="donation-amount">Donation Amount</label><br>
-          <input id="donation-amount" type="number" name="amount" value="{{donation.amount}}">
+        <label id="donation-label" for="charity-name">Full Name</label><br>
+        <input id="donation-name" type="text" name="donorName" value="{{donation.donorName}}"/>
       </p>
-  </div>
+    </div>
 
-  <div class="form-group">
-      <label for="charity-date">Donation Date</label></div>
-      <input id="donation-date" type="text" name="date" value="{{donation.date}}">
-  </div>
 
-  <!-- MESSAGE -->
-  <div class="form-group">
-    <p>
-      <label for="review-description">Message</label><br>
-      <textarea id="donation-message" class="form-control" placeholder="Any special message to the charity..." name="messageToCharity" rows="10" cols="30">{{donation.messageToCharity}}</textarea>
-    </p>
+        <!-- DONATION AMOUNT -->
+
+      <div class="form-group">
+          <p>
+              <label id="donation-label" for="donation-amount">Donation Amount</label><br>
+              <input id="donation-amount" type="number" name="amount" value="{{donation.amount}}">
+          </p>
+      </div>
+
+      <div class="form-group">
+          <label id="donation-label" for="charity-date">Donation Date</label></div>
+          <input id="donation-date" type="text" name="date" value="{{donation.date}}">
+      </div>
+
+      <!-- MESSAGE -->
+      <div class="form-group">
+        <p>
+          <label id="donation-label" for="review-description"</label><br>
+          <textarea id="donation-message" class="form-control" placeholder="Any special message to the charity..." name="messageToCharity" rows="10" cols="30">{{donation.messageToCharity}}</textarea>
+        </p>
+      </div>
   </div>
 </fieldset>
