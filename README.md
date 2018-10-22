@@ -17,8 +17,8 @@ Powered by the News RESTFul API, Charitable is an online platform for Humanitari
 
 ## ToDo
 
-- [ ] CRUD 2+ resources
-- [ ] Deploy to Heroku
+- [x] CRUD 2+ resources
+- [x] Deploy to Heroku
 - [ ] Add a RESTFul API to the server
 
 
