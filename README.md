@@ -10,8 +10,8 @@ Powered by the News RESTFul API, Charitable is an online platform for Humanitari
 
 ## Technology
 
-* Front End : handlebars, CSS, Boostrap, Javascript
-* Back End : Node.js , Express.js, Javascript
+* Front End : Handlebars, CSS, Boostrap, Javascript
+* Back End : Node.js , Express.js
 * Data Base : MongoDB
 * Testing : Mocha & Chai
 
